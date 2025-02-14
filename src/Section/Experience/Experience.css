@@ -1,0 +1,20 @@
+.experience-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-left: 100px;
+}
+.experience-items {
+  margin: 50px;
+}
+.experience-items p {
+  font-family: "Alef", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+section h2 {
+  margin-left: 135px;
+  font-family: "Alef", serif;
+  font-weight: 700;
+  font-style: normal;
+}

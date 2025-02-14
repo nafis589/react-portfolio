@@ -1,0 +1,69 @@
+.projet-img img {
+  width: 280px;
+  border-radius: 5px;
+  height: 180px;
+}
+.projet-container-item {
+  width: 315px;
+  height: 500px;
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    351deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(218, 251, 140, 1) 0%
+  );
+}
+.projet-container {
+  margin-left: 135px;
+  display: flex;
+  flex-direction: row;
+}
+.projet-img {
+  margin: 15px;
+}
+.projet-message {
+  margin-left: 15px;
+}
+.projet-message h3 {
+  font-size: 1.8rem;
+}
+.projet-message p {
+  margin-top: -20px;
+  font-size: 1.4rem;
+}
+.outil {
+  width: 50px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 50px;
+  background-color: #fff;
+}
+.btns {
+  margin-top: 40px;
+}
+.btns .a {
+  margin-left: 30px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  background-color: #e7ffae;
+  color: black;
+  letter-spacing: 3px;
+}
+.child {
+  margin-left: 15px;
+}
+.plus {
+  margin-top: 40px;
+  text-align: center;
+}
+.lien-plus {
+  color: #0d0d0d;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 10px 30px;
+  border-radius: 50px;
+  background-color: #e0e0e0;
+  letter-spacing: 2px;
+}

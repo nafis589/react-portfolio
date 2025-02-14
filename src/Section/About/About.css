@@ -1,0 +1,50 @@
+.about-container {
+  border-radius: 10px;
+  width: 80%;
+  margin-left: 100px;
+  background-color: #e7ffae;
+  margin-bottom: 50px;
+}
+.about-container h2 {
+  margin-left: 35px;
+  position: absolute;
+  font-family: "Alef", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.about-img img {
+  width: 400px;
+  height: 400px;
+  margin-top: 20px;
+}
+.about-img {
+  height: 400px;
+  margin-top: 40px;
+}
+.about {
+  display: flex;
+  flex-direction: row;
+}
+.about-message {
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.about-text {
+  margin-left: 70px;
+  margin-top: -80px;
+}
+.about-text p {
+  font-size: 1.3rem;
+  font-family: "Alef", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.about-text h3 {
+  font-family: "Alef", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.about-message-item {
+  list-style-type: none;
+  padding: 20px;
+}
