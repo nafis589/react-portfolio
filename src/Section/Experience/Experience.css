@@ -3,18 +3,56 @@
   flex-wrap: wrap;
   width: 80%;
   margin-left: 100px;
+  justify-content: center;
 }
+
 .experience-items {
   margin: 50px;
+  text-align: center;
 }
+
 .experience-items p {
   font-family: "Alef", serif;
   font-weight: 700;
   font-style: normal;
+  margin-top: 10px;
 }
+
 section h2 {
   margin-left: 135px;
   font-family: "Alef", serif;
   font-weight: 700;
   font-style: normal;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .experience-container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+  }
+
+  .experience-items {
+    margin: 20px;
+    width: 30%;
+  }
+
+  section h2 {
+    margin-left: 20px;
+    text-align: center;
+  }
+
+  .experience-item {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-items {
+    width: 45%;
+    margin: 10px;
+  }
 }

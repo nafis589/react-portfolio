@@ -1,12 +1,9 @@
 import "./Projets.css";
-import Nav from "../Navigation/Nav";
-import Footer from "../Footer/Footer";
 import "../Section/Projet/Projet.css";
 
 const Projets = () => {
   return (
     <>
-      <Nav />
       <section className="projet" id="projet">
         <h2>PROJET</h2>
         <div className="projet-container">
@@ -75,7 +72,6 @@ const Projets = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 };

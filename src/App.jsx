@@ -11,18 +11,24 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-      <Nav />
-      <Accueil />
-      <About />
-      <Experience />
       <Router>
+        <Nav />
         <Routes>
-          <Route path="/" element={<Projet />} />
+          <Route
+            path="/"
+            element={
+              <>
+                <Accueil />
+                <About />
+                <Experience />
+                <Projet />
+              </>
+            }
+          />
           <Route path="/projets" element={<Projets />} />
         </Routes>
+        <Footer />
       </Router>
-
-      <Footer />
     </>
   );
 }
