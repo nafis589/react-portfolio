@@ -47,6 +47,7 @@
   text-align: center;
   border-radius: 50px;
   background-color: #fff;
+  margin-left: 10px;
 }
 
 .btns {
@@ -132,4 +133,8 @@
     width: 80%;
     text-align: center;
   }
+}
+.outils {
+  display: flex;
+  flex-direction: row;
 }
