@@ -13,8 +13,8 @@ const Projet = () => {
             <div className="projet-message">
               <h3>E-commerce</h3>
               <p>
-                J&apos;ai conçu et développé un site e-commerce offrant une
-                expérience utilisateur optimale.
+                J&apos;ai conçu et développer un site e-commerce intuitif et
+                réactif .
               </p>
               <div className="outils">
                 <div className="outil">React</div>
