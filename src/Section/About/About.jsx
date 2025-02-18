@@ -1,8 +1,21 @@
 import "./About.css";
 import { SiFrontendmentor, SiBackendless, SiAntdesign } from "react-icons/si";
+import { useScroll, motion } from "framer-motion";
+import { useRef } from "react";
+
 const About = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1 1"],
+  });
+
   return (
-    <section id="about">
+    <motion.section
+      ref={ref}
+      style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+      id="about"
+    >
       <div className="about-container">
         <h2>A Propos</h2>
         <div className="about">
@@ -46,7 +59,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

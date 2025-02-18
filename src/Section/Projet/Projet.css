@@ -17,7 +17,6 @@
 }
 
 .projet-container {
-  margin-left: 135px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

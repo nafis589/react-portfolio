@@ -1,9 +1,21 @@
 import "./Projet.css";
 import { Link } from "react-router-dom";
+import { useScroll, motion } from "framer-motion";
+import { useRef } from "react";
 const Projet = () => {
+  const ref = useRef < HTMLElement > null;
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.1 1.5"],
+  });
   return (
     <>
-      <section className="projet" id="projet">
+      <motion.section
+        ref={ref}
+        style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+        className="projet"
+        id="projet"
+      >
         <h2>PROJET</h2>
         <div className="projet-container">
           <div className="projet-container-item">
@@ -87,7 +99,7 @@ const Projet = () => {
             Plus
           </Link>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 };
