@@ -1,20 +1,34 @@
 import "./About.css";
 import { SiFrontendmentor, SiBackendless, SiAntdesign } from "react-icons/si";
-import { useScroll, motion } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion"; // Importing motion from framer-motion
 
 const About = () => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1 1"],
-  });
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (index) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: index * 0.2, // Staggered animation
+        duration: 0.6,
+        ease: "easeInOut",
+      },
+    }),
+  };
 
   return (
     <motion.section
-      ref={ref}
-      style={{ scale: scrollYProgress, opacity: scrollYProgress }}
       id="about"
+      initial="hidden"
+      whileInView="visible"
+      variants={containerVariants}
+      transition={{ duration: 0.6 }}
     >
       <div className="about-container">
         <h2>A Propos</h2>
@@ -24,37 +38,41 @@ const About = () => {
           </div>
           <div className="about-message">
             <ul>
-              <li className="about-message-item">
-                <SiFrontendmentor style={{ fontSize: "50px" }} />
-                <div className="about-text">
-                  <h3>Développeur Frontend</h3>
-                  <p>
-                    Je suis un développeur frontend avec de l&apos;expérience
-                    dans la création de sites réactifs et optimisés.
-                  </p>
-                </div>
-              </li>
-              <li className="about-message-item">
-                <SiBackendless style={{ fontSize: "50px" }} />
-                <div className="about-text">
-                  <h3>Développeur Backend</h3>
-                  <p>
-                    J&apos;ai de l&apos;expérience dans le développement de
-                    systèmes backend rapides et optimisés, ainsi que dans la
-                    création d&apos;API.
-                  </p>
-                </div>
-              </li>
-              <li className="about-message-item">
-                <SiAntdesign style={{ fontSize: "50px" }} />
-                <div className="about-text">
-                  <h3>Design UI</h3>
-                  <p>
-                    J&apos;ai conçu plusieurs pages de destination (landing
-                    pages) et ai également créé des systèmes de design.
-                  </p>
-                </div>
-              </li>
+              {[
+                {
+                  icon: <SiFrontendmentor style={{ fontSize: "50px" }} />,
+                  title: "Développeur Frontend",
+                  description:
+                    "Je suis un développeur frontend avec de l'expérience dans la création de sites réactifs et optimisés.",
+                },
+                {
+                  icon: <SiBackendless style={{ fontSize: "50px" }} />,
+                  title: "Développeur Backend",
+                  description:
+                    "J'ai de l'expérience dans le développement de systèmes backend rapides et optimisés, ainsi que dans la création d'API.",
+                },
+                {
+                  icon: <SiAntdesign style={{ fontSize: "50px" }} />,
+                  title: "Design UI",
+                  description:
+                    "J'ai conçu plusieurs pages de destination (landing pages) et ai également créé des systèmes de design.",
+                },
+              ].map((item, index) => (
+                <motion.li
+                  className="about-message-item"
+                  variants={itemVariants}
+                  custom={index}
+                  initial="hidden"
+                  whileInView="visible"
+                  key={index}
+                >
+                  {item.icon}
+                  <div className="about-text">
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </div>
+                </motion.li>
+              ))}
             </ul>
           </div>
         </div>
