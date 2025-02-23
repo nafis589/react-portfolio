@@ -1,18 +1,18 @@
 import "./Projet.css";
 import { Link } from "react-router-dom";
-import { useScroll, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef } from "react";
+
 const Projet = () => {
   const ref = useRef < HTMLElement > null;
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1 1"],
-  });
+
   return (
     <>
       <motion.section
         ref={ref}
-        style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+        initial={{ opacity: 0, y: 50 }} // Start with opacity 0 and slightly below
+        whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and original position
+        transition={{ duration: 0.5 }} // Duration of the animation
         className="projet"
         id="projet"
       >
@@ -26,7 +26,7 @@ const Projet = () => {
               <h3>E-commerce</h3>
               <p>
                 J&apos;ai conçu et développer un site e-commerce intuitif et
-                réactif .
+                réactif.
               </p>
               <div className="outils">
                 <div className="outil">React</div>
@@ -78,7 +78,7 @@ const Projet = () => {
               <h3>title</h3>
               <p>
                 This is a project made to learn the latest languages by building
-                an app .
+                an app.
               </p>
               <div className="outils">
                 <div className="outil">React</div>
