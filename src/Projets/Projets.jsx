@@ -1,48 +1,87 @@
 import "./Projets.css";
 import "../Section/Projet/Projet.css";
-import { motion, useScroll, useTransform } from "framer-motion";
 
 const Projets = () => {
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 300], [100, 0]); // Adjust the range as needed
-
   return (
     <>
       <section className="projet" id="projet">
         <h2>PROJET</h2>
-        <motion.div className="projet-container" style={{ y }}>
-          {["E-commerce", "PORTFOLIO", "title"].map((title, index) => (
-            <motion.div
-              className="projet-container-item child"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0, scale: 1.05 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }} // Staggered effect
-              key={index}
-            >
-              <div className="projet-img">
-                <img src={`src/img/${title.toLowerCase()}.png`} alt={title} />
+        <div className="projet-container">
+          <div className="projet-container-item">
+            <div className="projet-img">
+              <img src="src/img/ecom.png" alt="" />
+            </div>
+            <div className="projet-message">
+              <h3>E-commerce</h3>
+              <p>
+                J&apos;ai conçu et développer un site e-commerce intuitif et
+                réactif.
+              </p>
+              <div className="outils">
+                <div className="outil">React</div>
               </div>
-              <div className="projet-message">
-                <h3>{title}</h3>
-                <p>
-                  This is a project made to learn the latest languages by
-                  building an app.
-                </p>
-                <div className="outils">
-                  <div className="outil">React</div>
-                </div>
-                <div className="btns">
-                  <a href="#" className="a">
-                    Demo
-                  </a>
-                  <a href="#" className="a">
-                    Source
-                  </a>
-                </div>
+              <div className="btns">
+                <a
+                  href="https://ecommerce-filtering-five.vercel.app/"
+                  className="a"
+                >
+                  Demo
+                </a>
+                <a href="#" className="a">
+                  Source
+                </a>
               </div>
-            </motion.div>
-          ))}
-        </motion.div>
+            </div>
+          </div>
+          <div className="projet-container-item child">
+            <div className="projet-img">
+              <img src="src/img/portfo.png" alt="" />
+            </div>
+            <div className="projet-message">
+              <h3>PORTFOLIO</h3>
+              <p>
+                Ce projet a été réalisé pour mettre en valeur mes compétences et
+                services.
+              </p>
+              <div className="outils">
+                <div className="outil">HTML</div>
+                <div className="outil">CSS</div>
+                <div className="outil">JS</div>
+              </div>
+              <div className="btns">
+                <a href="https://nafis-portofolio.vercel.app/" className="a">
+                  Demo
+                </a>
+                <a href="#" className="a">
+                  Source
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="projet-container-item child">
+            <div className="projet-img">
+              <img src="src/img/apropos.jpg" alt="" />
+            </div>
+            <div className="projet-message">
+              <h3>title</h3>
+              <p>
+                This is a project made to learn the latest languages by building
+                an app.
+              </p>
+              <div className="outils">
+                <div className="outil">React</div>
+              </div>
+              <div className="btns">
+                <a href="#" className="a">
+                  Demo
+                </a>
+                <a href="#" className="a">
+                  Source
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );
