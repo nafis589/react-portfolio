@@ -6,25 +6,28 @@ const Footer = () => {
     <footer id="contact">
       <div className="footer">
         <div className="footer-content">
-          <h1>CONTACT</h1>
+          <h1 id="contact">CONTACT</h1>
           <p>N’hésitez pas à me contacter!</p>
         </div>
         <div className="footer-link">
           <ul>
             <li className="footer-link-list">
-              <a href="#" className="list-l">
+              <a href="mailto:princenafistoure@gmail.com" className="list-l">
                 <MdAttachEmail style={{ fontSize: "2rem" }} />
                 <div className="paragraphe">princenafistoure@gmail.com</div>
               </a>
             </li>
             <li className="footer-link-list">
-              <a href="#" className="list-l">
+              <a
+                href="https://www.linkedin.com/in/princenafistoure"
+                className="list-l"
+              >
                 <FaLinkedinIn style={{ fontSize: "2rem" }} />
                 <div className="paragraphe">linkedin.com</div>
               </a>
             </li>
             <li className="footer-link-list">
-              <a href="#" className="list-l">
+              <a href="https://github.com/nafis589" className="list-l">
                 <FaGithub style={{ fontSize: "2rem" }} />
                 <div className="paragraphe">github.com</div>
               </a>

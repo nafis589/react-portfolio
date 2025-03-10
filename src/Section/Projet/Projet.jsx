@@ -75,13 +75,13 @@ const Projet = () => {
               <img src="src/img/apropos.jpg" alt="" />
             </div>
             <div className="projet-message">
-              <h3>title</h3>
+              <h3>Chatbot-CLI</h3>
               <p>
-                This is a project made to learn the latest languages by building
-                an app.
+                Un chatbot en (CLI) permettant de communiquer avec une (IA)
+                générative.
               </p>
               <div className="outils">
-                <div className="outil">React</div>
+                <div className="outil">Node</div>
               </div>
               <div className="btns">
                 <a href="#" className="a">
