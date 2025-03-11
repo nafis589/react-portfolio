@@ -9,7 +9,7 @@ const Projets = () => {
         <div className="projet-container">
           <div className="projet-container-item">
             <div className="projet-img">
-              <img src="src/img/ecom.png" alt="" />
+              <img src="/img/ecom.png" alt="" />
             </div>
             <div className="projet-message">
               <h3>E-commerce</h3>
@@ -35,7 +35,7 @@ const Projets = () => {
           </div>
           <div className="projet-container-item child">
             <div className="projet-img">
-              <img src="src/img/portfo.png" alt="" />
+              <img src="/img/portfo.png" alt="" />
             </div>
             <div className="projet-message">
               <h3>PORTFOLIO</h3>
@@ -60,7 +60,7 @@ const Projets = () => {
           </div>
           <div className="projet-container-item child">
             <div className="projet-img">
-              <img src="src/img/apropos.jpg" alt="" />
+              <img src="/img/apropos.jpg" alt="" />
             </div>
             <div className="projet-message">
               <h3>CHATBOT CLI</h3>

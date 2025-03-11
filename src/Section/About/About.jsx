@@ -34,7 +34,7 @@ const About = () => {
         <h2>A Propos</h2>
         <div className="about">
           <div className="about-img">
-            <img src="src/img/coding-image.png" alt="about" />
+            <img src="img/coding-image.png" alt="about" />
           </div>
           <div className="about-message">
             <ul>

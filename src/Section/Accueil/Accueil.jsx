@@ -63,7 +63,7 @@ const Accueil = () => {
           </motion.div>
         </div>
         <motion.div className="myimage" variants={imageVariants}>
-          <img src="src/img/img-accueil.jpg" alt="Nafis" />
+          <img src="/img/img-accueil.jpg" alt="Nafis" />
         </motion.div>
       </div>
     </motion.section>
